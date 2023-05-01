@@ -603,10 +603,12 @@ p {
 .subscribe-container > .footer-subscribe {
   display: flex;
 }
+.footer-subscribe-label {
+  margin-right: 24px;
+}
 .footer-input {
   height: 40px;
   width: 264px;
-  margin-right: 24px;
   color: var(--white-background);
   background-color: var(--dark);
   padding: 8px 16px;
@@ -685,6 +687,9 @@ p {
   right: 24px;
   transition: fill var(--time-animation) var(--time-allocation),
     background-color var(--time-animation) var(--time-allocation);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 24px;
   height: 24px;
   border-radius: 50%;
