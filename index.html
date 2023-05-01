@@ -584,16 +584,99 @@
             </li>
           </ul>
         </div>
+        <!-- Subscribe form of footer -->
+        <form class="footer-subscribe">
+          <label for="subcribe" class="title-socialmedia">Subcribe</label>
+          <div class="subscribe-container">
+            <input
+              type="email"
+              name="subcribe"
+              id="subcribe"
+              class="footer-input"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="footer-btn btn">
+              Subscribe
+              <svg class="icon-send">
+                <use href="./images/icon.svg#icon-subscribe"></use>
+              </svg>
+            </button>
+          </div>
+        </form>
       </div>
     </footer>
     <!-- Модальне вікно для секції 1 -->
     <div data-modal class="backdrop is-hidden">
       <div class="modal">
-        <button data-modal-close class="modal-btn btn" type="button">
+        <button data-modal-close class="modal-btn" type="button">
           <svg class="modal-icon" width="8px" height="8px">
             <use href="./images/icon.svg#icon-close-black"></use>
           </svg>
         </button>
+        <!-- Розмітка форм -->
+        <form class="form-container">
+          <p class="form-title">
+            Leave your contacts and we will call you back
+          </p>
+          <div class="label-container">
+            <label class="modal-label" for="name"> Name </label>
+            <div class="modal-input-container">
+              <input
+                class="modal-input"
+                type="text"
+                name="name"
+                id="name"
+                autofocus
+              />
+              <svg class="modal-icon-label" width="18px" height="18px">
+                <use href="./images/icon.svg#icon-person-black"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="label-container">
+            <label class="modal-label" for="tel"> Phone </label>
+            <div class="modal-input-container">
+              <input class="modal-input" type="tel" name="tel" id="tel" />
+              <svg class="modal-icon-label" width="18px" height="24px">
+                <use href="./images/icon.svg#icon-phone-black"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="label-container">
+            <label class="modal-label" for="email"> Email </label>
+            <div class="modal-input-container">
+              <input class="modal-input" type="email" name="email" id="email" />
+              <svg class="modal-icon-label" width="18px" height="24px">
+                <use href="./images/icon.svg#icon-email-black"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal-textarea-container">
+            <label class="modal-label" for="comment"> Comment </label>
+            <textarea
+              class="modal-textarea"
+              name="comment"
+              id="comment"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="accept-label-container">
+            <label class="accept-label">
+              <input
+                class="modal-checkbox"
+                type="checkbox"
+                name="privacypolice"
+              />
+              <span class="modal-privacypolice">
+                I accept the terms and conditions of the
+                <a class="modal-privacypolice-link link" href="">
+                  Privacy Policy
+                </a></span
+              >
+            </label>
+            <button class="form-btn btn" type="submit">Send</button>
+          </div>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>

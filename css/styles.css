@@ -594,6 +594,53 @@ p {
 .portfolio-text {
   min-width: 75px;
 }
+/* Підписка в футері */
+.footer-subscribe {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+}
+.title-socialmedia {
+  color: var(--white-background);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+.footer-subscribe > .subscribe-container {
+  display: flex;
+}
+.footer-input {
+  height: 40px;
+  width: 264px;
+  margin-right: 24px;
+  color: var(--white-background);
+  background-color: var(--dark);
+  padding: 8px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+.footer-input::placeholder {
+  background-color: var(--dark);
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-btn {
+  display: flex;
+  align-items: center;
+  padding: 8px 24px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+  font-family: inherit;
+}
+.icon-send {
+  fill: var(--white-background);
+  width: 24px;
+  height: 20px;
+  margin-left: 16px;
+  padding: auto 0;
+}
 
 /*  */
 /* Модальне вікно */
@@ -639,23 +686,155 @@ p {
   opacity: 0;
 }
 .modal-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
+  transition: fill var(--time-animation) var(--time-allocation),
+    background-color var(--time-animation) var(--time-allocation);
   display: flex;
   align-items: center;
   justify-content: center;
   width: 24px;
   height: 24px;
-  background-color: var(--accent);
-  border: 1px solid #0000001a;
+  padding: 0;
+  margin-bottom: 24px;
+  margin-left: auto;
   border-radius: 50%;
+  cursor: pointer;
+  fill: var(--border);
+  background-color: #e7e9fc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.modal-icon {
+.modal-btn:hover,
+.modal-btn:focus {
+  fill: var(--white-background);
+  background-color: var(--pressed-state);
+}
+.form-title {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: var(--dark);
+}
+.label-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+.label-container > .modal-input-container {
+  position: relative;
+}
+.modal-label {
+  margin-right: auto;
+  margin-bottom: 4px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: var(--subtle-text);
+}
+.modal-input {
+  transition: background-color var(--time-animation) var(--time-allocation),
+    outline var(--time-animation) var(--time-allocation);
+  width: 100%;
+  height: 40px;
+  padding: 8px 16px 8px 38px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+}
+.modal-input:focus,
+.modal-textarea:focus {
+  outline: 1px solid var(--pressed-state);
+}
+.modal-input:focus + .modal-icon-label {
+  fill: var(--pressed-state);
+}
+.modal-icon-label {
+  position: absolute;
+  transform: translateY(-50%);
+  left: 16px;
+  top: 50%;
   transition: fill var(--time-animation) var(--time-allocation);
   fill: var(--dark);
 }
-.modal-btn:hover .modal-icon,
-.modal-btn:focus .modal-icon {
+.modal-textarea-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+.modal-textarea {
+  transition: outline var(--time-animation) var(--time-allocation);
+  resize: none;
+  height: 120px;
+  padding: 8px 16px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+}
+.modal-textarea::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  color: rgba(117, 117, 117, 0.5);
+}
+.accept-label {
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+}
+.modal-checkbox {
+  transition: background-color var(--time-animation) var(--time-allocation),
+    border-color var(--time-animation) var(--time-allocation),
+    background-size var(--time-animation) var(--time-allocation);
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  /* іконка чекбоксу */
+  background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.46075 0.489373C8.62509 0.344946 8.84379 0.265101 9.0707 0.266686C9.29761 0.268271 9.51498 0.351162 9.67694 0.497868C9.83889 0.644574 9.93278 0.843621 9.93878 1.05301C9.94477 1.26239 9.86242 1.46574 9.70908 1.62014L5.05408 6.99399C4.97404 7.07357 4.87743 7.13744 4.77004 7.18177C4.66264 7.2261 4.54667 7.24998 4.42904 7.252C4.31142 7.25401 4.19456 7.2341 4.08546 7.19347C3.97637 7.15284 3.87726 7.09232 3.79408 7.01553L0.707082 4.16599C0.621114 4.09205 0.552162 4.00288 0.504338 3.9038C0.456514 3.80472 0.430798 3.69777 0.428725 3.58932C0.426652 3.48087 0.448264 3.37315 0.492272 3.27258C0.53628 3.172 0.601782 3.08065 0.684871 3.00395C0.767959 2.92725 0.866932 2.86679 0.975885 2.82616C1.08484 2.78554 1.20154 2.76559 1.31903 2.76751C1.43651 2.76942 1.55238 2.79316 1.65971 2.8373C1.76704 2.88145 1.86364 2.9451 1.94375 3.02445L4.38675 5.27845L8.43858 0.513066C8.44588 0.504775 8.45367 0.496865 8.46192 0.489373H8.46075Z' fill='%23F4F4FD'/%3E%3C/svg%3E%0A");
+  /*  */
   fill: var(--light);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 0;
+}
+.modal-checkbox:checked {
+  background-color: var(--pressed-state);
+  border-color: var(--pressed-state);
+  background-origin: border-box;
+  background-size: 10px;
+}
+.modal-privacypolice {
+  margin-left: 8px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33px;
+  letter-spacing: 0.04em;
+  color: #757575;
+}
+.modal-privacypolice-link {
+  text-decoration-line: underline;
+  color: var(--primary-brand);
+}
+.form-btn {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 16px 32px;
+  cursor: pointer;
+  background: var(--primary-brand);
+  color: var(--white-background);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 }
