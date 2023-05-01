@@ -585,24 +585,26 @@
           </ul>
         </div>
         <!-- Subscribe form of footer -->
-        <form class="footer-subscribe">
-          <label for="subcribe" class="title-socialmedia">Subcribe</label>
-          <div class="subscribe-container">
-            <input
-              type="email"
-              name="subcribe"
-              id="subcribe"
-              class="footer-input"
-              placeholder="E-mail"
-            />
+        <div class="subscribe-container">
+          <p class="footer-social-media-text text">Subcribe</p>
+          <form class="footer-subscribe">
+            <label for="subcribe" class="title-socialmedia">
+              <input
+                type="email"
+                name="subcribe"
+                id="subcribe"
+                class="footer-input"
+                placeholder="E-mail"
+              />
+            </label>
             <button type="submit" class="footer-btn btn">
               Subscribe
               <svg class="icon-send">
                 <use href="./images/icon.svg#icon-subscribe"></use>
               </svg>
             </button>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </footer>
     <!-- Модальне вікно для секції 1 -->
@@ -621,13 +623,7 @@
           <div class="label-container">
             <label class="modal-label" for="name"> Name </label>
             <div class="modal-input-container">
-              <input
-                class="modal-input"
-                type="text"
-                name="name"
-                id="name"
-                autofocus
-              />
+              <input class="modal-input" type="text" name="name" id="name" />
               <svg class="modal-icon-label" width="18px" height="18px">
                 <use href="./images/icon.svg#icon-person-black"></use>
               </svg>
